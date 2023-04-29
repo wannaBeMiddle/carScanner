@@ -102,7 +102,7 @@ class User implements ControllerInterface
 		{
 			$view = Container::getInstance()->get(View::class);
 			$view->show('edit', [
-				'user' => Container::getInstance()->get(User::class)->getId()
+				'user' => Container::getInstance()->get(\App\Modules\System\User\User::class)->getId()
 			], true);
 		}
 	}
