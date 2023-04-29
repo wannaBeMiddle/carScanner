@@ -1,2 +1,9 @@
 .idea
 assets
+/app/configuration.php
+/app/modules/*
+/logs
+.htaccess
+index.php
+/app/namespaces.php
+!/app/modules/ecocar
