@@ -54,10 +54,10 @@ $this->setPlaceholder('CSS', 'signup');
                     <option value="2">Дизельный</option>
                 </select>
             </div>
-            <!--<div class="mb-3 d-none" id="fuelTypeDiv">
+            <div class="mb-3" id="fuelTypeDiv">
                 <label for="fuelType" class="form-label">Октановое число топлива</label>
                 <input type="number" class="form-control" id="fuelType" name="fuel_type">
-            </div>-->
+            </div>
 			<div class="form-footer">
                 <?if(isset($result['errors'])):?>
                     <?foreach ($result['errors'] as $error):?>
@@ -86,14 +86,13 @@ $this->setPlaceholder('CSS', 'signup');
         autocomplete: true
     });
 
-    /*$('.selectpicker').on('change', function (event) {
+    $('#engineType').on('change', function (event) {
         if(this.value == 2)
         {
-            console.log(this.value);
             $('#fuelTypeDiv').toggleClass('d-none');
         }else
         {
             $('#fuelTypeDiv').toggleClass('d-none');
         }
-    });*/
+    });
 </script>
