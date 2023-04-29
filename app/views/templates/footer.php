@@ -17,18 +17,18 @@ $user = Container::getInstance()->get(User::class);
         <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav">
                 <li class="nav-item">
-                    <a class="nav-link active" aria-current="page" href="main.html">Данные</a>
+                    <a class="nav-link active" aria-current="page" href="/main/">Данные</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#">Связь с менеджером</a>
+                    <a class="nav-link" href="/question/">Связь с менеджером</a>
                 </li>
                 <?if($user->isAuthorized()):?>
                     <li class="nav-item dropup">
                         <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown" aria-expanded="false">Профиль</a>
                         <ul class="dropdown-menu">
-                            <li><a class="dropdown-item" href="#">Личный кабинет</a></li>
-                            <li><a class="dropdown-item" href="#">Ввести показания вручную</a></li>
-                            <li><a class="dropdown-item text-danger" href="#">Выйти</a></li>
+                            <li><a class="dropdown-item" href="/profile/">Личный кабинет</a></li>
+                            <li><a class="dropdown-item" href="/edit/">Ввести показания вручную</a></li>
+                            <li><a class="dropdown-item text-danger" href="/logout/">Выйти</a></li>
                         </ul>
                     </li>
                 <?endif;?>
