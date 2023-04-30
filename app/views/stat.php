@@ -32,7 +32,9 @@ switch ($result['user']['user']['engineType'])
                             <li class="list-group-item">Модель автомобиля - <?=$result['user']['user']['model']?></li>
                             <li class="list-group-item">Год выпуска - <?=$result['user']['user']['manufacturedYear']?></li>
                             <li class="list-group-item">Тип двигателя - <?=$result['user']['user']['engineType']?></li>
-                            <li class="list-group-item">Тип топлива - <?=$result['user']['user']['fuelType']?></li>
+                            <?if($result['user']['user']['fuelType'] == 1):?>
+                                <li class="list-group-item">Тип топлива - <?=$result['user']['user']['fuelType']?></li>
+                            <?endif;?>
                         </ul>
                     </div>
                 </div>
